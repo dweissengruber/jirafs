@@ -10,7 +10,7 @@ import sys
 import time
 import traceback
 
-from blessings import Terminal
+from blessed import Terminal
 
 try:
     from jira.utils import JIRAError

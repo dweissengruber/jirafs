@@ -22,7 +22,7 @@ from typing import (
     Union,
 )
 
-from blessings import Terminal
+from blessed import Terminal
 
 from . import __version__, constants
 from .exceptions import MacroAttributeError, MacroContentError, MacroError
@@ -622,9 +622,7 @@ class MacroPlugin(Plugin):
             return f"<jirafs:{self.tag_name}{attrs_string} />"
         else:
             return (
-                f"<jirafs:{self.tag_name}{attrs_string}>"
-                f"{data}"
-                f"</jirafs:{self.tag_name}>"
+                f"<jirafs:{self.tag_name}{attrs_string}>{data}</jirafs:{self.tag_name}>"
             )
 
 
